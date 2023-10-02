@@ -48,6 +48,9 @@ SourceArt/**/*.tga
 # StarterContent
 StarterContent/HDRI/*
 
+#BIG CONTENT that can be downloaded any time
+Content/CommonHazel
+
 # Binary Files
 Binaries/*
 Plugins/*/Binaries/*
