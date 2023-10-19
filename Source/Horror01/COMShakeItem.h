@@ -16,8 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UCOMShakeItem();
 
-	UPROPERTY(BlueprintAssignable)
-	bool isRunning;
+	
 
 protected:
 	// Called when the game starts
@@ -26,7 +25,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
+	
+	UPROPERTY(EditAnywhere, Category="My Stuff")
+	bool isRunning;
+	
 	// Starts our animation
 	void Run();
 		
