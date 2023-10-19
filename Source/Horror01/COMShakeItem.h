@@ -23,6 +23,7 @@ protected:
 	virtual void BeginPlay() override;
 	float runTimer;
 	FVector originalLocation;
+	FVector currentLocation;
 
 public:	
 	// Called every frame

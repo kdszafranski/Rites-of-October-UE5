@@ -20,8 +20,7 @@ UCOMShakeItem::UCOMShakeItem()
 void UCOMShakeItem::BeginPlay()
 {
 	Super::BeginPlay();
-	originalLocation = GetOwner()->GetActorLocation();
-	
+	originalLocation = GetOwner()->GetActorLocation();	
 }
 
 // Called every frame
@@ -33,15 +32,12 @@ void UCOMShakeItem::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	if (isRunning) {
 		runTimer += DeltaTime;
 		AActor* Parent = GetOwner();
-		FVector currentLocation = originalLocation;
 
 		if (runTimer < runDuration) {
 			//UE_LOG(LogTemp, Warning, TEXT("MOVING THING"));
 			if (Parent) {
 				float xOffset = rand() % static_cast<int>(shakeOffset * 2) - shakeOffset;
 				currentLocation.X = originalLocation.X + xOffset;
-				/*float yOffset = rand() % static_cast<int>(5 * 2) - 5;
-				currentLocation.Y = originalLocation.Y + yOffset;*/
 
 				Parent->SetActorLocation(currentLocation);
 			}
@@ -49,7 +45,6 @@ void UCOMShakeItem::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 			// stop and put us back where we started
 			runTimer = 0;
 			isRunning = false;
-			UE_LOG(LogTemp, Warning, TEXT("DONE SHAKING"));
 			Parent->SetActorLocation(originalLocation);
 		}
 
@@ -58,6 +53,6 @@ void UCOMShakeItem::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 void UCOMShakeItem::Run()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Running Shake Component"));
 	isRunning = true;
+	currentLocation = originalLocation;
 }
