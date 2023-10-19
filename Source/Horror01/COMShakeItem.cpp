@@ -11,7 +11,6 @@ UCOMShakeItem::UCOMShakeItem()
 	PrimaryComponentTick.bCanEverTick = true;
 	isRunning = false;
 
-	// ...
 }
 
 
@@ -19,12 +18,8 @@ UCOMShakeItem::UCOMShakeItem()
 void UCOMShakeItem::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	Run();
 	
 }
-
 
 // Called every frame
 void UCOMShakeItem::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -49,4 +44,3 @@ void UCOMShakeItem::Run()
 	UE_LOG(LogTemp, Warning, TEXT("Running Shake Component"));
 	isRunning = true;
 }
-

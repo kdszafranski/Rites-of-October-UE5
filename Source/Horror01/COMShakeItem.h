@@ -25,11 +25,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	
+
 	UPROPERTY(EditAnywhere, Category="My Stuff")
 	bool isRunning;
 	
 	// Starts our animation
+	UFUNCTION(BlueprintCallable)
 	void Run();
 		
 };
