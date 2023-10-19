@@ -22,6 +22,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	float runTimer;
+	FVector originalLocation;
 
 public:	
 	// Called every frame
@@ -31,6 +32,8 @@ public:
 	bool isRunning;
 	UPROPERTY(EditAnywhere, Category="Component Settings")
 	float runDuration;
+	UPROPERTY(EditAnywhere, Category = "Component Settings")
+	float shakeOffset;
 	
 	// Starts our animation
 	UFUNCTION(BlueprintCallable)
