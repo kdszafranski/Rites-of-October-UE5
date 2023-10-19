@@ -21,13 +21,16 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	float runTimer;
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere, Category="My Stuff")
+	UPROPERTY(EditAnywhere, Category="Component Settings")
 	bool isRunning;
+	UPROPERTY(EditAnywhere, Category="Component Settings")
+	float runDuration;
 	
 	// Starts our animation
 	UFUNCTION(BlueprintCallable)

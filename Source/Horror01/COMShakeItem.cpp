@@ -10,6 +10,8 @@ UCOMShakeItem::UCOMShakeItem()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 	isRunning = false;
+	runTimer = 0;
+	runDuration = 1;
 
 }
 
@@ -28,14 +30,22 @@ void UCOMShakeItem::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 	// ...
 	if (isRunning) {
-		AActor* Parent = GetOwner();
-		UE_LOG(LogTemp, Warning, TEXT("MOVING THING"));
-		if (Parent) {
-			Parent->SetActorLocation(
-				Parent->GetActorLocation() + FVector(44, 44, 44)
-			);
+		runTimer += DeltaTime;
+		UE_LOG(LogTemp, Warning, TEXT("%f"), runTimer);
+		if (runTimer < runDuration) {
+			AActor* Parent = GetOwner();
+			UE_LOG(LogTemp, Warning, TEXT("MOVING THING"));
+			if (Parent) {
+				Parent->SetActorLocation(
+					Parent->GetActorLocation() + FVector(5, 0, 0)
+				);
+			}
+		} else {
+			// stop
+			runTimer = 0;
+			isRunning = false;
 		}
-		isRunning = false;
+
 	}
 }
 
