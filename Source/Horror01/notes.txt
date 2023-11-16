@@ -1,3 +1,8 @@
+
+
+
+
+
 if fear is less than minFear
     start fading blood only 1 time....
 
