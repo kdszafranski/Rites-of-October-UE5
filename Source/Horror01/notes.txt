@@ -1,0 +1,14 @@
+if fear is less than minFear
+    start fading blood only 1 time....
+
+
+
+in HUD
+
+fade over 10 seconds
+
+if fading
+    in tick
+        timer reduces by deltaTime
+        reduce blood opacity by deltaTime
+            to minimum of 50% (0.5)
