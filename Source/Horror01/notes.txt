@@ -1,3 +1,14 @@
+Puzzles..
+
+candle
+- carry
+- light - extend arm to fire, lightable on only central crow fire
+- anim/position to block wind with hand
+- running puts it out
+- only candle light illuminates Star path markers
+
+
+
 
 
 Inventory.
