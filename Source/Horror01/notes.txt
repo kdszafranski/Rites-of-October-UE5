@@ -1,6 +1,34 @@
 
 
+Inventory.
 
+Have to use rock as weapon or throw them.
+
+Have to use candle.
+
+Is there a need for this? The tiles show the faces which are a good reference. which means to see it you need to be able to look at it again, examine.
+
+Hitting 1 loads first usable or weapon. Hitting 2, next, etc.
+
+Mousewheel up/down cycles thru usables/weapons
+
+OR. puzzle 4 just displays the tiles on the side for reference.
+
+- hold one item at a time
+
+Items
+- rock, wp
+- pipe, wp
+- candle
+- lantern
+- special tiles
+
+No other items....  so picking up a weapon replaces the current one
+
+Switch from candle to weapon.... no need to do this?
+
+
+Would be cool tho to allow examination of non-usables.
 
 
 if fear is less than minFear
